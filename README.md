@@ -1,6 +1,6 @@
 # Key-value-data-store-repo-for-basic-CRD-Operations
 
-## To Build a file-based key-value data store that supports the basic CRD (create, read, and delete) operations. This data store is meant to be used as a local storage for one single process on one laptop. The data store must be exposed as a library to clients that can instantiate a class and work with the data store.
+## File-based key-value data store that supports the basic CRD (create, read, and delete) operations. This data store is meant to be used as a local storage for one single process on one laptop. The data store must be exposed as a library to clients that can instantiate a class and work with the data store.
 
 The data store will support the following **Functional requirements**:-
 
@@ -20,3 +20,10 @@ The data store will also support the following **Non-functional requirements**:-
 2. More than one client process cannot be allowed to use the same file as a data store at any given time.
 3. A client process is allowed to access the data store using multiple threads, if it desires to. The data store must therefore be thread-safe.
 4. The client will bear as little memory costs as possible to use this data store, while deriving maximum performance with respect to response times for accessing the data store.
+
+**Operational Instructions**:-
+1. Download the code from the repository.
+2. Make sure both backendmodue and userside module are in same directory.
+3. Python compiler is essential to execute the code.
+4. The backendmodule is imported as library into the userside module.
+5. Run the usersideaccess module, to access the datastore.
