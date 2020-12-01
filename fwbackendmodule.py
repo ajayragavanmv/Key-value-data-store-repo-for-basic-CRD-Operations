@@ -33,6 +33,8 @@ Print operation is an extra function to check and print the values present in da
 Note: As expired keys are not accessible by read and delete function,It is not permanently deleted
 so while we create an
 extra print function, even the expired keys will be printed.
+
+So, to avoid this, we can provide user an option inside delete function also to delete the expired key.
 """
 #Lock is being used to avoid two threads accessing data at the same time to avoid clashes between them
 """
@@ -76,14 +78,14 @@ performance and time taken for seperate processing
 Here only two threads are taken for testing purpose.
 """
 
-def initiatefn():
+def initiatefn():  #Starting point of access of datastore
     oplist=['1.Create value','2.Read value','3.Delete the value','4.Print the datastore','5.Quit']
     i=1
     while(i):  #With respect to user choice,execute appropriate functions
         print("\nEnter the operation needed to be performed")
-        print(*oplist, sep = "\n")
+        print(*oplist, sep = "\n")  #Print the list menu, each menu operations printed in seperate line, to increase clarity in output console window
         j=int(input())
-        if(j==1):
+        if(j==1): #createfunction
             print("Enter key,value and timeout(Optional)")
             print("Note:- Enter the values seperated by space")
             ipcomb=input()
@@ -96,17 +98,17 @@ def initiatefn():
                 createfn(ip[0],ip[1])
             else:
                 print("Entered data incorrect format")
-        elif(j==2):
+        elif(j==2): #readfunction
             print("Enter key to read")
             ip=input()
             readfn(ip)
-        elif(j==3):
+        elif(j==3): #deletefunction
             print("Enter key to delete")
             ip=input()
             deletefn(ip)
-        elif(j==4):
+        elif(j==4): #printfunction
             printfn()
-        elif(j==5):
+        elif(j==5): #Quit current execution
             i=0
         else:
             print("Enter the correct option from 1 - 5")
