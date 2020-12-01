@@ -24,6 +24,9 @@ The data store will also support the following **Non-functional requirements**:-
 **Operational Instructions**:-
 1. Download the code from the repository.
 2. Make sure both backendmodue and userside module are in same directory.
-3. Python compiler is essential to execute the code.
+3. Python3 is essential to execute the code.
 4. The backendmodule is imported as library into the userside module.
 5. Run the usersideaccess module, to access the datastore.
+
+
+**Code was written in Python3(Ver 3.9.0) in Spyder IPython**
